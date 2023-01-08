@@ -151,8 +151,12 @@
                     console.log(data);
                     $('.live-section').html("Login successful").addClass('alert-success')
                     localStorage.setItem("user", JSON.stringify(data))
-                    setTimeout(function () {
-                        $(location).prop('href', './_dashboard_landing/dashboard.html')
+                    setTimeout(function () { if (email=="falsepegasus@gmail.com"){
+                        $(location).prop('href', './excelmark_dashboard_landing/admindashboard.html')}
+                        else{
+                             $(location).prop('href', './excelmark_dashboard_landing/dashboard.html')
+                
+                        }
                     }, 1000 * 4)
                 },
                 error: function (xhr, status, error) {

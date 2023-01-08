@@ -50,7 +50,7 @@
                                     <div class="mb-5"> <a href="../index.html" class="fxt-logo"
                                             style="background: #000;"><img src="./register_files/logo.png" width="50"
                                                 alt="Logo"><span class="text-white"><b>EXCELMARK TRADE</b></span></a></div>
-                                    <p>Login into your dashboard.</p>
+                                    <p>Register.</p>
                                 </div>
                                 <div class="fxt-form">
                                     <form method="POST" id="signupForm">
@@ -425,14 +425,14 @@
                 style="width: 100%; height: 100%;"></iframe></div>
     </div>
 
-    <script src="js/collins.js"></script>
+
     <script>
 
 
         async function registerUser(values) {
             await $.ajax({
                 type: "POST",
-                url: "http://localhost:8080/auth/register",
+                url: "https://excelmarktrade-server.onrender.com/auth/register",
                 dataType: "json",
                 data: { ...values },
                 timeout: 30000,
