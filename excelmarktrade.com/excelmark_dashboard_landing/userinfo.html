@@ -1102,7 +1102,7 @@ $(document).ready(async function () {
 
   async function fetchUserInfo() {
   var parsedData = localStorage.getItem('user')
-//  alert(parsedData)
+
 
   const response = await $.ajax({
     type: "GET",
@@ -1160,7 +1160,7 @@ $('#updateBtn').click(async function (e) {
   var balance =parseInt( $('#balance').val())
 
   await updateProfile({ firstName, lastName, email, balance })
-  alert(balance)
+
 })
 
 
