@@ -9244,6 +9244,8 @@
 
     <!-- end #sidebar -->
     <div id="content" class="content">
+       <h3 class="live-section p-5"></h3>
+        
       <!-- begin breadcrumb -->
       <!-- end breadcrumb -->
       <!-- begin page-header -->
@@ -9660,7 +9662,10 @@
         url: `https://excelmarktrade-server.onrender.com/transactions/${dataObj._id}/withdrawal`,
         dataType: "json",
         timeout: 30000,
-        data: dataObj
+        data: dataObj,
+ success: function () {
+          $('.live-section').show().addClass("alert-primary").text("withdrawal request successful")
+        }
       });
       console.log(response);
       return response.data
