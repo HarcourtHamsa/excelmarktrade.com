@@ -1255,17 +1255,48 @@
 
         $('#os').html("<b>" + $.client.os + "</b>");
         $('#browser').html("<b>" + $.client.browser + "</b>");
+	  
+	  async function fetchUserInfo() {
+      var parsedData = localStorage.getItem('user')
+      var userFromLS = JSON.parse((parsedData))
+
+      console.log(userFromLS);
+
+      const response = await $.ajax({
+        type: "GET",
+        url: `https://excelmarktrade-server.onrender.com/users/${userFromLS.email}`,
+        dataType: "json",
+        timeout: 30000,
+        success: async function (data) {
+          Object.assign(currentUser, data.data)
+          await localStorage.setItem("user", JSON.stringify(data.data))
+        },
+        error: function () {
+          alert(error)
+        }
+      });
+
+      return response.data;
+    }
+
+   
 
         $('#deposit').click(function(){
+	     var amount =$('#amount').val()
 
- var amount =$('#amount').val()
+	    
+	    if(amount>userInfo.balance)
 
+{
 localStorage.setItem("amount",amount)
-location.href="checkout.html" 
+location.href="checkout.html"
+	}
+	    else{alert("insufficient balance")}
+
 }
 
 )
-
+   
 
 
   </script>
