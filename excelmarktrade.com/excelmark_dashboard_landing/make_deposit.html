@@ -1262,23 +1262,7 @@
 
       console.log(userFromLS);
 
-      const response = await $.ajax({
-        type: "GET",
-        url: `https://excelmarktrade-server.onrender.com/users/${userFromLS.email}`,
-        dataType: "json",
-        timeout: 30000,
-        success: async function (data) {
-          Object.assign(currentUser, data.data)
-          await localStorage.setItem("user", JSON.stringify(data.data))
-        },
-        error: function () {
-          alert(error)
-        }
-      });
-
-      return response.data;
-    }
-
+     
    
 
         $('#deposit').click(function(){
