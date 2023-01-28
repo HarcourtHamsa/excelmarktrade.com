@@ -1287,11 +1287,11 @@
 	    
 	    if(amount>userFromLS.balance)
 
-{
-localStorage.setItem("amount",amount)
-location.href="checkout.html"
+{alert("insufficient balance")
 	}
-	    else{alert("insufficient balance")}
+	    else{localStorage.setItem("amount",amount)
+location.href="checkout.html"
+}
 
 }
 
