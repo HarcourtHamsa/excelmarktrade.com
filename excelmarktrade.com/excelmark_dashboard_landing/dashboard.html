@@ -10466,15 +10466,16 @@
       const userInfo = await fetchUserInfo();
 
   let sum=0;
+      let withdrawnTotal=0;
   let withdrawnAmount=0;
   userInfo.transactions.forEach(element=>{sum+=Number(element.amount)})
-
+userInfo.withdrawals.forEach(element=>{withdrawnTotal+=Number(element.amount)})
   userInfo.withdrawals.forEach(element=>{withdrawnAmount+=Number(element.amount)})
 
 
       $('#sum').html(sum)
 $('#lastWithdrawal').html(userInfo.withdrawals.reverse()[0].amount)
-$('#totalWithdrawn').html(userInfo.withdrawals.reverse()[0].amount)
+$('#totalWithdrawn').html(withdrawnTotal)
 $('#lastDeposit').html(userInfo.transactions.reverse()[0].amount)
 
 $('#totalDeposited').html(sum)
