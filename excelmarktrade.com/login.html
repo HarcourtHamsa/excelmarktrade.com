@@ -86,7 +86,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <div class="fxt-transformY-50 fxt-transition-delay-4">
-                                                    <button class="fxt-btn-fill">Log
+                                                    <button class="fxt-btn-fill" onclick="blurr(this)">Log
                                                         in</button>
 
                                                 </div>
@@ -137,6 +137,14 @@
     <script type="text/javascript" src="./login_files/particle.js.download"></script>
     <script type="text/javascript" src="./login_files/main.js.download"></script>
     <script>
+         function blurr(e){
+   
+   e.style.opacity="0.5"
+   e.innerHTML="Loading . . ."
+   e.style.pointerEvent="none"
+  
+  
+}
 
         async function loginUser({ email, password }) {
             await $.ajax({
