@@ -9344,12 +9344,30 @@
     }
 
     function sendUserDetail(user){
-    console.log(user)
-
-    
+      alert(user)
 
     //  localStorage.setItem("user",user)
     //  location.href="userdetails.php.html" 
+    
+//     const response = await $.ajax({
+//     type: "PUT",
+//     url: `https://excelmarktrade-server.onrender.com/users/withdrawals/:${transactionId}`,
+//     dataType: "json",
+//     data: { transactionId  },
+//     timeout: 30000,
+//     success: function () {
+//       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
+
+//       // setTimeout(function () {$(location).prop('href', './activeusers.html')     
+//       //              }, 1000 * 2)
+
+//     }
+//   });
+
+//   console.log(response);
+//   return response.data
+// }
+
 
 
 }
@@ -9374,7 +9392,7 @@ var td=$('<td>');
               $('<td>').text(`${request.status}`).appendTo(row);
                 // $('<td>').addClass("identity").text(`${request._id}`).appendTo(row);
              
-                $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+request._id+'\')"  >Approve</a></td>').appendTo (row);
+                $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+request.status+'\')"  >Approve</a></td>').appendTo (row);
        
               
                 tbl.appendTo($(".table"));
