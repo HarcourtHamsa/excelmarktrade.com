@@ -9349,28 +9349,28 @@
     //  localStorage.setItem("user",user)
     //  location.href="userdetails.php.html" 
 
-    async function sendUserDetail({transactionId}){
+    function sendUserDetail(transactionId){
     console.log(transactionId)
 
-
-    const response = await $.ajax({
-    type: "PUT",
-    url: `https://excelmarktrade-server.onrender.com/users/withdrawals/:${transactionId}`,
-    dataType: "json",
-    data: { transactionId  },
-    timeout: 30000,
-    success: function () {
-      $('.live-section').addClass("alert-primary").text("Profile updated successfully")
-
-      // setTimeout(function () {$(location).prop('href', './activeusers.html')     
-      //              }, 1000 * 2)
-
     }
-  });
+//     const response = await $.ajax({
+//     type: "PUT",
+//     url: `https://excelmarktrade-server.onrender.com/users/withdrawals/:${transactionId}`,
+//     dataType: "json",
+//     data: { transactionId  },
+//     timeout: 30000,
+//     success: function () {
+//       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
 
-  console.log(response);
-  return response.data
-}
+//       // setTimeout(function () {$(location).prop('href', './activeusers.html')     
+//       //              }, 1000 * 2)
+
+//     }
+//   });
+
+//   console.log(response);
+//   return response.data
+// }
 
 
     
