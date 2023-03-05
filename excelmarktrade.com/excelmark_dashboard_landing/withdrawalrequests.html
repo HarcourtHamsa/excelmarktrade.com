@@ -9363,8 +9363,8 @@
   
       var tbl = $('.table-body');
 var td=$('<td>');
-     users.forEach(function (user) {
-        const withdrawalreq=user.withdrawal;
+     users.map(function (user) {
+        const withdrawalreq=user.withdrawals;
         withdrawalreq.forEach(function(request){
             var row = $('<tr>').appendTo(tbl);
         $('<td>').text(`${request.from}`).appendTo(row);
