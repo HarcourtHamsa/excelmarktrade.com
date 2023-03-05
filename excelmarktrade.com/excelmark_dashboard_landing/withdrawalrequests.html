@@ -9383,7 +9383,7 @@
       var tbl = $('.table-body');
 var td=$('<td>');
      users.map(function (user) {
-        const withdrawalreq=user.withdrawals.reverse();
+        const withdrawalreq=user.withdrawals;
         withdrawalreq.map(function(request){
           
             var row = $('<tr>').appendTo(tbl);
