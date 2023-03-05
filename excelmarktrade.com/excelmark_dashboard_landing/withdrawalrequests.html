@@ -9365,7 +9365,7 @@
 var td=$('<td>');
      users.map(function (user) {
         const withdrawalreq=user.withdrawals;
-        withdrawalreq.forEach(function(request){
+        withdrawalreq.map(function(request){
             var row = $('<tr>').appendTo(tbl);
         $('<td>').text(`${request.from}`).appendTo(row);
             $('<td>').text(`$${request.amount}`).appendTo(row);
