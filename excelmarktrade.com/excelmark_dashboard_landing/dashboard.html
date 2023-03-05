@@ -10461,7 +10461,6 @@
     }
     $(document).ready(async function () {
       const userInfo = await fetchUserInfo();
-        const userInfo = await fetchUserInfo();
            $("#username").html(userInfo.firstName + " " + userInfo.lastName);
            $("#email").html(userInfo.email);
            $("#accountBalance").html(userInfo.balance);
