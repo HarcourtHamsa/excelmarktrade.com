@@ -86,7 +86,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <div class="fxt-transformY-50 fxt-transition-delay-4">
-                                                    <button class="fxt-btn-fill" onclick="blurr(this)">Log
+                                                    <button class="fxt-btn-fill" onclick="blurr()" id="btn">Log
                                                         in</button>
 
                                                 </div>
@@ -137,13 +137,18 @@
     <script type="text/javascript" src="./login_files/particle.js.download"></script>
     <script type="text/javascript" src="./login_files/main.js.download"></script>
     <script>
-         function blurr(e){
+       var btn=document.getElementById('btn');
+function red () {
+        btn.style.opacity="1"
+        btn.value="Login"
+
+                       }
+
+function blurr (){
+    
+    btn.style.opacity="0.5"
+    btn.value= "Loading . . ."
    
-   e.style.opacity="0.5"
-   e.innerHTML="Loading . . ."
-   e.style.pointerEvent="none"
-  
-  
 }
 
         async function loginUser({ email, password }) {
@@ -166,6 +171,7 @@
                     }, 1000 * 4)
                 },
                 error: function (xhr, status, error) {
+                    red();
                     console.log(error);
                     $('.live-section').html("Email or password incorrect").addClass('alert-danger')
                 }

@@ -380,7 +380,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <div class="fxt-transformY-50 fxt-transition-delay-4">
-                                                    <button class="fxt-btn-fill" id="registerBtn" onclick="blurr(this)">Register</button>
+                                                    <button class="fxt-btn-fill" id="registerBtn" onclick="blurr()" >Register</button>
 
                                                 </div>
                                             </div>
@@ -427,13 +427,18 @@
 
 
     <script>
- function blurr(e){
+ var btn=document.getElementById('registerBtn');
+function red () {
+        btn.style.opacity="1"
+        btn.value="Login"
+
+                       }
+
+function blurr (){
+    
+    btn.style.opacity="0.5"
+    btn.value= "Loading . . ."
    
-   e.style.opacity="0.5"
-   e.innerHTML="Loading . . ."
-   e.style.pointerEvent="none"
-  
-  
 }
 
         async function registerUser(values) {
@@ -452,6 +457,7 @@
 
                 },
                 error: function (xhr, status, error) {
+                    red();
                     console.log(error);
                     $('.live-section').html("User already exists").addClass('alert-danger')
                 }
