@@ -9343,9 +9343,9 @@
       return response.data
     }
 
-    function sendUserDetail(request._id){
+    function sendUserDetail(identity){
 
-      alert(request._id)
+      alert(identity)
     
 
     //  localStorage.setItem("user",user)
@@ -9367,11 +9367,12 @@ var td=$('<td>');
      users.map(function (user) {
         const withdrawalreq=user.withdrawals;
         withdrawalreq.map(function(request){
+          var identity=request._id;
             var row = $('<tr>').appendTo(tbl);
         $('<td>').text(`${request.from}`).appendTo(row);
             $('<td>').text(`$${request.amount}`).appendTo(row);
               $('<td>').text(`${request.status}`).appendTo(row);
-                $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+request._id+'\')"  >Approve</a></td>').appendTo (row);
+                $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+identity+'\')"  >Approve</a></td>').appendTo (row);
        
               
                 tbl.appendTo($(".table"));
