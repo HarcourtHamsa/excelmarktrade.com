@@ -9343,37 +9343,17 @@
       return response.data
     }
 
-    
+    function sendUserDetail(user){
+    console.log(user)
+
     
 
     //  localStorage.setItem("user",user)
     //  location.href="userdetails.php.html" 
 
-    function sendUserDetail(ident){
-    console.log(ident)
 
-    }
-//     const response = await $.ajax({
-//     type: "PUT",
-//     url: `https://excelmarktrade-server.onrender.com/users/withdrawals/:${transactionId}`,
-//     dataType: "json",
-//     data: { transactionId  },
-//     timeout: 30000,
-//     success: function () {
-//       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
+}
 
-//       // setTimeout(function () {$(location).prop('href', './activeusers.html')     
-//       //              }, 1000 * 2)
-
-//     }
-//   });
-
-//   console.log(response);
-//   return response.data
-// }
-
-
-    
     
     $(document).ready(async function () {
         
@@ -9387,14 +9367,14 @@ var td=$('<td>');
      users.map(function (user) {
         const withdrawalreq=user.withdrawals.reverse();
         withdrawalreq.map(function(request){
-          var ident=request.id;
+          
             var row = $('<tr>').appendTo(tbl);
         $('<td>').text(`${request.from}`).appendTo(row);
             $('<td>').text(`$${request.amount}`).appendTo(row);
               $('<td>').text(`${request.status}`).appendTo(row);
-                //  $('<td>').addClass("identity").text(`${request._id}`).appendTo(row);
+                // $('<td>').addClass("identity").text(`${request._id}`).appendTo(row);
              
-                $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+ident+'\')"  >Approve</a></td>').appendTo (row);
+                $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+request._id+'\')"  >Approve</a></td>').appendTo (row);
        
               
                 tbl.appendTo($(".table"));
