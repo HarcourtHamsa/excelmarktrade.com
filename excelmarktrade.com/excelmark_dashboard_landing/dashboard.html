@@ -10464,6 +10464,15 @@
     }
     $(document).ready(async function () {
       const userInfo = await fetchUserInfo();
+        const userInfo = await fetchUserInfo();
+           $("#username").html(userInfo.firstName + " " + userInfo.lastName);
+           $("#email").html(userInfo.email);
+           $("#accountBalance").html(userInfo.balance);
+           $("#amountDeposited").html(userInfo.amountDeposited);
+           $("#totalEarnings").html(Number(userInfo.balance + userInfo.profit));
+           $("#accountname").html(userInfo.firstName);
+           $("#accountname2").html(userInfo.firstName + " " + userInfo.lastName);
+       
 
   let sum=0;
       let withdrawnTotal=0;
@@ -10479,14 +10488,7 @@ $('#totalWithdrawn').html(withdrawnTotal)
 $('#lastDeposit').html(userInfo.transactions.reverse()[0].amount)
 
 $('#totalDeposited').html(sum)
-      $('#username').html(userInfo.firstName + " " + userInfo.lastName)
-      $('#email').html(userInfo.email)
-      $('#accountBalance').html(userInfo.balance)
-      $('#amountDeposited').html(userInfo.amountDeposited)
-      $('#totalEarnings').html(Number(userInfo.balance + userInfo.profit))
-      $('#accountname').html(userInfo.firstName )
-      $('#accountname2').html(userInfo.firstName +" " +userInfo.lastName)
-
+    
     });
 
 
