@@ -9331,6 +9331,64 @@
   <script src="./deposits_files/script36e.js.download"></script>
   <script src="./deposits_files/recent.js.download"></script>
 
+  <script type="text/javascript">
+    async function fetchUser() {
+      const response = await $.ajax({
+        type: "GET",
+        url: 'https://excelmarktrade-server.onrender.com/users',
+        dataType: "json",
+        timeout: 30000,
+      });
+
+      console.log(response.data);
+      return response.data
+    }
+
+    function sendUserDetail(user){
+    
+
+     localStorage.setItem("user",user)
+     location.href="userdetails.php.html" 
+
+
+}
+
+    
+    $(document).ready(async function () {
+        
+      
+       const users = await fetchUser();
+    
+       
+  
+      var tbl = $('.table-body');
+var td=$('<td>');
+     users.forEach(function (user) {
+        const withdrawalreq=user.withdrawal;
+        withdrawalreq.forEach(function(request){
+            var row = $('<tr>').appendTo(tbl);
+        $('<td>').text(`${request.from}`).appendTo(row);
+            $('<td>').text(`$${request.amount}`).appendTo(row);
+              
+                tbl.appendTo($(".table"));
+
+        })
+        
+        // var row = $('<tr>').appendTo(tbl);
+        // $('<td>').text(`$${user.transactions}`).appendTo(row);
+        // $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+user.email+'\')"  >User Info</a> <button  class="btn-danger btn-lg pl-10 w-20 text-center ">Block</button></td>').appendTo (row);
+       
+    
+      
+
+      })
+
+
+      
+    
+    });
+    </script>
+
 
 
   <script>
