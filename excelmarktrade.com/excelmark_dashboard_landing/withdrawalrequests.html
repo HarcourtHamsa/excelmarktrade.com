@@ -9349,7 +9349,7 @@
     //  localStorage.setItem("user",user)
     //  location.href="userdetails.php.html" 
 
-    async function sendUserDetail(transactionId){
+    async function sendUserDetail({transactionId}){
     console.log(transactionId)
 
 
@@ -9392,9 +9392,9 @@ var td=$('<td>');
         $('<td>').text(`${request.from}`).appendTo(row);
             $('<td>').text(`$${request.amount}`).appendTo(row);
               $('<td>').text(`${request.status}`).appendTo(row);
-                 $('<td>').addClass("identity").text(`${request._id}`).appendTo(row);
+                //  $('<td>').addClass("identity").text(`${request._id}`).appendTo(row);
              
-                $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+request._id +'\')"  >Approve</a></td>').appendTo (row);
+                $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+request._id+'\')"  >Approve</a></td>').appendTo (row);
        
               
                 tbl.appendTo($(".table"));
