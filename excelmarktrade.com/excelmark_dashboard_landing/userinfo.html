@@ -1146,6 +1146,10 @@ async function updateProfile({ firstName, lastName, email, balance}) {
     timeout: 30000,
     success: function () {
       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
+
+      setTimeout(function () {$(location).prop('href', './activeusers.html')     
+                   }, 1000 * 2)
+
     }
   });
 

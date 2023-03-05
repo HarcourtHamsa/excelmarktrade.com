@@ -10693,10 +10693,11 @@
       
       $(document).ready(async function () {
         const users = await fetchUser();
-         
+         var registeredUsers=users.length;
+
+         $('#registered').html(registeredUsers);
   
-       var registered=users.length;
-  
+       
         
        
       
