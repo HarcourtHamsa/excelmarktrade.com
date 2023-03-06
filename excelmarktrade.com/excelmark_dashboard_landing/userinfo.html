@@ -1163,7 +1163,7 @@ $('#updateBtn').click(async function (e) {
   var firstName = $('#firstName').val()
   var lastName = $('#lastName').val()
   var email = $('#email').val()
-  var balance =parseInt( $('#balance').val())
+  var balance = $('#balance').val()
 
   console.log(balance)
   await updateProfile({ firstName, lastName, email, balance })
