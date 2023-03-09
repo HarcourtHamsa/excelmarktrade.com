@@ -9460,7 +9460,9 @@
    async function sendUserDetail(details){
     await details;
     console.log(details)
-      let [_id,transactionId]=details;
+     
+      var _id=details[0];
+      var transactionId=details[1];
       
 console.log(_id)
 console.log(transactionId)
