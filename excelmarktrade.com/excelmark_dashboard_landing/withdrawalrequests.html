@@ -9501,8 +9501,10 @@ var td=$('<td>');
      users.map(function (user) {
         const withdrawalreq=user.withdrawals;
         var _id=user._id;
+        console.log(_id)
         withdrawalreq.map(function(request){
           var transactionId=request._id;
+          console.log(transactionId)
        var details=[_id,transactionId]
             var row = $('<tr>').appendTo(tbl);
         $('<td>').text(`${request.from}`).appendTo(row);
