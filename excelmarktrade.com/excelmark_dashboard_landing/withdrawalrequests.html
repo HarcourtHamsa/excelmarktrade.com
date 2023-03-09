@@ -9461,8 +9461,8 @@
     await details;
     console.log(details)
      
-      var _id=details[0];
-      var transactionId=details[1];
+      var {_id}=details;
+      var {transactionId}=details;
       
 console.log(_id)
 console.log(transactionId)
@@ -9504,12 +9504,12 @@ console.log(transactionId)
 var td=$('<td>');
      users.map(function (user) {
         const withdrawalreq=user.withdrawals;
-        var _id=user._id;
-        console.log(_id)
+        var id=user._id;
+        console.log(id)
         withdrawalreq.map(function(request){
-          var transactionId=request._id;
+          var transactId=request._id;
           console.log(transactionId)
-       var details=[_id,transactionId]
+       var details={_id:id,transactionId:transactId}
             var row = $('<tr>').appendTo(tbl);
         $('<td>').text(`${request.from}`).appendTo(row);
             $('<td>').text(`$${request.amount}`).appendTo(row);
