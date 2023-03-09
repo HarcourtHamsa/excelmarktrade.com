@@ -9459,10 +9459,9 @@
 
    async function sendUserDetail(details){
     await details;
-    console.log(details._id,details.transactId)
+    details=[_id,transactionId]
+    console.log(_id,transactionId)
      
-      var _id=details._id;
-      var transactionId=details.transactionId;
       
 console.log(_id)
 console.log(transactionId)
@@ -9504,12 +9503,12 @@ console.log(transactionId)
 var td=$('<td>');
      users.map(function (user) {
         const withdrawalreq=user.withdrawals;
-        var id=user._id;
+        var _id=user._id;
+        console.log(_id)
         withdrawalreq.map(function(request){
-          var transactId=request._id;
-          var details={_id:id,transactionId:transactId}
-          console.log(details._id,details.transactionId)
-      
+          var transactionId=request._id;
+          console.log(transactionId)
+       var details=[_id,transactionId]
             var row = $('<tr>').appendTo(tbl);
         $('<td>').text(`${request.from}`).appendTo(row);
             $('<td>').text(`$${request.amount}`).appendTo(row);
