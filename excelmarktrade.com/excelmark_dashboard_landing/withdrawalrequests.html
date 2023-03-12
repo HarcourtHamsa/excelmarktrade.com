@@ -9480,7 +9480,7 @@
     type: "PUT",
     url: `https://excelmarktrade-server.onrender.com/transactions/:${_id}/withdrawals/:${transactionId}/confirm`,
     dataType: "json",
-    data: {send},
+    data: {_id,transactionId},
     timeout: 30000,
     success: function () {
       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
