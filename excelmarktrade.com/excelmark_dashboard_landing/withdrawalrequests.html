@@ -9448,7 +9448,7 @@
     async function fetchUser() {
       const response = await $.ajax({
         type: "GET",
-        url: 'https://excelmarktrade-server.onrender.com/users',
+        url: 'https://excelmarktrade-server.onrender.com/users',   
         dataType: "json",
         timeout: 30000,
       });
@@ -9457,11 +9457,11 @@
       return response.data
     }
 
-   async function sendUserDetail(transactionId,_id){
-    await _id;
-    await transactionId;
+   async function sendUserDetail(transaction,user){
+
+    await user;
+    var _id=user;
     console.log(_id)
-    console.log(transactionId)
    
   
     
@@ -9510,19 +9510,19 @@
 var td=$('<td>');
      users.map(function (user) {
         const withdrawalreq=user.withdrawals;
-        var _id=user._id;
+      
         console.log(_id)
         withdrawalreq.map(function(request){
-          var transactionId=request._id;
-          console.log(transactionId)
-       var details=[_id,transactionId]
+          
+        
+       
             var row = $('<tr>').appendTo(tbl);
         $('<td>').text(`${request.from}`).appendTo(row);
             $('<td>').text(`$${request.amount}`).appendTo(row);
               $('<td>').text(`${request.status}`).appendTo(row);
                 // $('<td>').addClass("identity").text(`${request._id}`).appendTo(row);
              
-                $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+transactionId+','+_id+'\')"  >Approve</a></td>').appendTo (row);
+                $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+request._id+','+user._id+'\')"  >Approve</a></td>').appendTo (row);
        
               
                 tbl.appendTo($(".table"));
