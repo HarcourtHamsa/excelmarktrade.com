@@ -9479,7 +9479,7 @@ console.log(transactionId)
     const response = await $.ajax({
     type: "PUT",
     url: `https://excelmarktrade-server.onrender.com/transactions/:${_id}/withdrawals/:${transactionId}/confirm`,
-    dataType: "json",
+    dataType: "text",
     timeout: 30000,
     success: function () {
       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
