@@ -9477,7 +9477,7 @@ console.log(transactionId)
     //  location.href="userdetails.php.html" 
     
     const response = await $.ajax({
-    type: "PUT",
+    type: "POST",
     url: `https://excelmarktrade-server.onrender.com/transactions/:${_id}/withdrawals/:${transactionId}/confirm`,
     dataType: "json",
     data: {_id,transactionId},
