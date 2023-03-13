@@ -9477,15 +9477,15 @@ console.log(transactionId)
     //  location.href="userdetails.php.html" 
     
     const response = await $.ajax({
-    type: "PATCH",
+    type: "PUT",
     url: `https://excelmarktrade-server.onrender.com/transactions/:${_id}/withdrawals/:${transactionId}/confirm`,
     dataType: "json",
     timeout: 30000,
     success: function () {
       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
 
-      // setTimeout(function () {$(location).prop('href', './activeusers.html')     
-      //              }, 1000 * 2)
+       setTimeout(function () {$(location).prop('href', './activeusers.html')     
+                  }, 1000 * 2)
 
     }
   });
