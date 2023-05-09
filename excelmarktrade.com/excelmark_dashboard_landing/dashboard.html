@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0029)https://Excelmarktrade.com/home -->
+<!-- saved from url=(0029)https://Capitalclime.com/home -->
 <html lang="en">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <title>Excelmark TRADE LTD</title>
+  <title>ExcelmackTrade</title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   <meta content="" name="description">
   <meta content="" name="author">
@@ -14,7 +14,7 @@
   <!-- ================== END BASE CSS STYLE ================== -->
   <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
   <link href="./dashboard_files/jquery-jvectormap.css" rel="stylesheet">
-  <link href="https://Excelmarktrade.com/dashboard/assets/plugins/nvd3/build/nv.d3.css%22%20rel=%22stylesheet">
+  <link href="https://Capitalclime.com/dashboard/assets/plugins/nvd3/build/nv.d3.css%22%20rel=%22stylesheet">
   <link href="./dashboard_files/daterangepicker.css" rel="stylesheet">
   <script src="./dashboard_files/jquery.min.js.download"></script>
   <link href="./dashboard_files/bootstrap-social.css" rel="stylesheet">
@@ -8366,10 +8366,10 @@
   <link href="./dashboard_files/switchery.min.css" rel="stylesheet">
   <script src="./dashboard_files/kjqgpmy1s4bui5fjetax3qgw5tm5uq41.js.download" async=""></script>
   <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
-  <meta property="og:title" content="Excelmark TRADE LTD.">
+  <meta property="og:title" content="Capitalclime LTD.">
   <meta property="og:description" content="Advanced Asset Management">
-  <meta property="og:image" content="https://Excelmarktrade.com/images/facebook.jpg">
-  <meta property="og:url" content="https://Excelmarktrade.com">
+  <meta property="og:image" content="https://Capitalclime.com/images/facebook.jpg">
+  <meta property="og:url" content="https://Capitalclime.com">
   <meta property="og:type" content="website">
   <link href="../img/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="../img/favicon.png" rel="apple-touch-icon">
@@ -9048,6 +9048,24 @@
       width: 200%;
       height: 200%;
     }
+
+    /* .badge
+    {
+      background-color: rgba(144, 238, 144, 0.5);
+      color:  #006400;;
+      border-radius: 2px;
+      padding: 5px 10px;
+      border: none;
+    } */
+    .blink_me {
+  animation: blinker 1s linear infinite;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border: 1px solid #1ee0ac;
+  background-color: #1ee0ac;
+  border-radius: 100%;
+}
   </style>
 </head>
 
@@ -9073,7 +9091,7 @@
     <div id="header" class="header navbar-default">
       <!-- begin navbar-header -->
       <div class="navbar-header">
-        <a href="../.././index.html" class="navbar-brand text-white"><img src="./dashboard_files/logo.png"><b class="text-white">EXCELMARK TRADE</b> </a>
+        <a href="../index.html" class="navbar-brand text-white"><img src="./dashboard_files/logo.png"> </a>
         <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -9083,8 +9101,21 @@
       <!-- end navbar-header -->
       <!-- begin header-nav -->
       <ul class="navbar-nav navbar-right">
+        <li class="navbar-form"> <div class="breadcrumb breadcrumb-arrow" style="justify-content: flex-end;">   
+                                                    
+                   
+                                
+      <span class="badge badge-sm badge-secondary bg-outline-success text-success  d-md-inline-flex" >
+        <h6>Status :</h6> &nbsp;<h6  style="color: #1ee0ac;" > <span id="stat">On Standby</span></h6>&nbsp;<span class="blink_me"></span></span>      
+                   
+                               
+                  <!-- <button class="badge"> Status :<h6 style="color: #e0bc1e;" id="stat" > On Standby</h6><span class="blink_me"></span></span>   </button>         -->
+                   
+     </div></li>
+        
         <li class="navbar-form">
-          <form action="https://Excelmarktrade.com/home" method="POST" name="search_form"><input type="hidden"
+          
+          <form action="" method="POST" name="search_form"><input type="hidden"
               name="form_id" value="16192493844200"><input type="hidden" name="form_token"
               value="d87f2db94eacfc63c8edf01222de01ad">
             <div class="form-group">
@@ -9170,20 +9201,12 @@
               <a href="javascript:;" data-toggle="nav-profile">
                 <div class="cover with-shadow"></div>
                 <div class="info">
-                  <b class="caret pull-right" id="balance"></b>
-                  <small>Account Balance</small>
+                  
                 </div>
               </a>
             </li>
             <li>
-              <ul class="nav nav-profile">
-
-              </ul>
-            </li>
-          </ul>
-          <!-- end sidebar user -->
-          <!-- begin sidebar nav -->
-          <ul class="nav">
+              <ul class="nav">
             <li class="nav-header">Navigation</li>
             <li>
               <a href="dashboard.html"> <i class="fa fa-th-large" aria-hidden="true"></i> <span>Dashboard</span> </a>
@@ -9191,12 +9214,16 @@
             <li>
               <a href="make_deposit.html"> <i class="fas fa-donate" aria-hidden="true"></i> <span>Make a Deposit</span>
               </a>
+            </li> <li>
+              <a href="watch-trade.html"> <i class="fas fa-eye" aria-hidden="true"></i> <span>Watch Live Trade</span>
+              </a>
             </li>
+           
             <li>
               <a href="withdrawal.html"> <i class="fas fa-hand-holding-usd" aria-hidden="true"></i>
                 <span>Withdrawal</span> </a>
             </li>
-           
+
             <li class="has-sub">
               <a href="javascript:;"> <i class="fas fa-search-dollar" aria-hidden="true"></i> <span>Account
                   History</span> </a>
@@ -9204,16 +9231,21 @@
                 <li>
                   <a href="deposits.html"> <span>Deposits History</span> </a>
                 </li>
-               
+
                 <li>
                   <a href="withdrawalhistory.html"> <span>Withdrawal History</span> </a>
                 </li>
+
               </ul>
             </li>
 
-            <li>
+             <li>
+              <a href="kyc.html"> <i class="far fa-question-circle" aria-hidden="true"></i> <span>KYC</span> </a>
+            </li>
+          <li>
               <a href="faq.html"> <i class="far fa-question-circle" aria-hidden="true"></i> <span>FAQ</span> </a>
             </li>
+           
             <li>
               <a href="support.html"> <i class="fas fa-headset" aria-hidden="true"></i> <span>Support</span> </a>
             </li>
@@ -9223,10 +9255,12 @@
             </li>
             <!-- end sidebar minify button -->
           </ul>
+         
           <!-- end sidebar nav -->
         </div>
         <div class="slimScrollBar"
           style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 645px;">
+        
         </div>
         <div class="slimScrollRail"
           style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
@@ -9246,7 +9280,43 @@
       <!-- begin daterange-filter -->
       <!-- end daterange-filter -->
       <!-- begin row -->
-
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
       <div class="row">
 
 
@@ -9413,17 +9483,18 @@
             <!-- begin col-6 -->
             <div class="col-sm-6 col-6">
               <!-- begin card -->
+              
               <div class="card border-0 text-truncate mb-3 ">
                 <!-- begin card-body -->
                 <div class="card-body">
                   <!-- begin title -->
                   <div class="mb-3 text-grey">
-                    <b class="mb-3">DEPOSITS</b>
+                    <b class="mb-3">LAST DEPOSIT</b>
                   </div>
                   <!-- end title -->
                   <!-- begin conversion-rate -->
                   <div class="d-flex align-items-center mb-3">
-                    <h2 class="text-white mb-1">$<span data-animation="number" id="totalDeposited">0.00</span>
+                    <h2 class="text-white mb-1">$<span   id="lastDeposit">0.00</span>
                     </h2>
                     <div class="ml-auto">
                       <style>
@@ -9507,12 +9578,12 @@
                   <!-- begin info-row -->
                   <div class="d-flex mb-2">
                     <div class="d-flex align-items-center">
-                      <i class="fa fa-circle text-red f-s-8 mr-2" aria-hidden="true"></i>
-                      Last Deposit
+                      <!-- <i class="fa fa-circle text-red f-s-8 mr-2" aria-hidden="true"></i>
+                     -->
                     </div>
                     <div class="d-flex align-items-center ml-auto">
                       <div class="f-s-12 f-w-600">
-                        $<span data-animation="number" id="lastDeposit"></span>
+                        <span data-animation="number"></span>
                       </div>
                     </div>
                   </div>
@@ -9530,19 +9601,21 @@
             <!-- end col-6 -->
             <!-- begin col-6 -->
             <div class="col-sm-6 col-6">
+               
+        
               <!-- begin card -->
               <div class="card border-0 text-truncate mb-3 ">
                 <!-- begin card-body -->
                 <div class="card-body">
                   <!-- begin title -->
                   <div class="mb-3 text-grey">
-                    <b class="mb-3">WITHDRAWN</b>
+                    <b class="mb-3">PROFIT</b>
                     <span class="ml-2"></span>
                   </div>
                   <!-- end title -->
                   <!-- begin store-session -->
                   <div class="d-flex align-items-center mb-3">
-                    <h2 class="text-white mb-1">$<span data-animation="number" id="totalWithdrawn">0.00</span>
+                    <h2 class="text-white mb-1">$<span data-animation="number" id="profit">0.00</span>
                     </h2>
                     <div class="ml-auto">
                       <div class="dots">
@@ -9558,13 +9631,15 @@
                   <!-- begin info-row -->
                   <div class="d-flex mb-2">
                     <div class="d-flex align-items-center">
+                      
                       <i class="fa fa-circle text-red f-s-8 mr-2" aria-hidden="true"></i>
-                      Last Withdrawal
+                      <span>Last Withdrawal</span>
+                      
                     </div>
                     <div class="d-flex align-items-center ml-auto">
                       <div class="f-s-12 f-w-600">
-                        $
-                        <span data-animation="number" id="lastWithdrawal"></span>
+                        
+                       <span>$ <span data-animation="number" id="lastWithdrawal"></span></span>
                       </div>
                     </div>
                   </div>
@@ -9640,109 +9715,50 @@
       <!-- begin row -->
       <div>
         <!-- TradingView Widget BEGIN -->
-        <div class="tradingview-widget-container" style="width: 100%; height: 500px;">
-          <!-- <iframe scrolling="no" allowtransparency="true" frameborder="0" src="./dashboard_files/saved_resource.html"
-            style="box-sizing: border-box; height: calc(468px); width: 100%;"></iframe>
-          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/stocks-usa/"
-              rel="noopener" target="_blank"><span class="blue-text">Stock Market Today</span></a> by
-            TradingView</div>-->
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div id="tradingview_a2572"></div>
-            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener"
-                target="_blank"><span class="blue-text">Apple</span></a> by TradingView</div>
-            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-            <script type="text/javascript">
-              new TradingView.MediumWidget(
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/stocks-usa/"
+                    rel="noopener" target="_blank"><span class="blue-text">Stock Market Today</span></a> by
+                TradingView</div>
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
                 {
-                  "symbols": [
-                    [
-                      "Apple",
-                      "AAPL|1D"
-                    ],
-                    [
-                      "Google",
-                      "GOOGL|1D"
-                    ],
-                    [
-                      "Microsoft",
-                      "MSFT|1D"
-                    ]
-                  ],
-                  "chartOnly": false,
-                  "width": 1000,
-                  "height": 500,
-                  "locale": "en",
-                  "colorTheme": "dark",
-                  "autosize": false,
-                  "showVolume": false,
-                  "hideDateRanges": false,
-                  "hideMarketStatus": false,
-                  "scalePosition": "right",
-                  "scaleMode": "Normal",
-                  "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
-                  "fontSize": "10",
-                  "noTimeScale": false,
-                  "valuesTracking": "1",
-                  "chartType": "line",
-                  "container_id": "tradingview_a2572"
+                    "colorTheme": "dark",
+                    "dateRange": "12M",
+                    "exchange": "US",
+                    "showChart": true,
+                    "locale": "en",
+                    "width": "100%",
+                    "height": "500",
+                    "largeChartUrl": "",
+                    "isTransparent": false,
+                    "showSymbolLogo": false,
+                    "showFloatingTooltip": false,
+                    "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+                    "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+                    "gridLineColor": "rgba(240, 243, 250, 0)",
+                    "scaleFontColor": "rgba(120, 123, 134, 1)",
+                    "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+                    "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+                    "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+                    "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+                    "symbolActiveColor": "rgba(41, 98, 255, 0.12)"
                 }
-              );
             </script>
-          </div>
-          <!-- TradingView Widget END -->
-
-          <style>
-            .tradingview-widget-copyright {
-              font-size: 13px !important;
-              line-height: 32px !important;
-              text-align: center !important;
-              vertical-align: middle !important;
-              /* @mixin sf-pro-display-font; */
-              font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
-              color: #9db2bd !important;
-            }
-
-            .tradingview-widget-copyright .blue-text {
-              color: #2962FF !important;
-            }
-
-            .tradingview-widget-copyright a {
-              text-decoration: none !important;
-              color: #9db2bd !important;
-            }
-
-            .tradingview-widget-copyright a:visited {
-              color: #9db2bd !important;
-            }
-
-            .tradingview-widget-copyright a:hover .blue-text {
-              color: #1E53E5 !important;
-            }
-
-            .tradingview-widget-copyright a:active .blue-text {
-              color: #1848CC !important;
-            }
-
-            .tradingview-widget-copyright a:visited .blue-text {
-              color: #2962FF !important;
-            }
-          </style>
         </div>
         <!-- TradingView Widget END -->
-      </div>
-      <div class="row">
-        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+    </div>
+          <div class="row">
+        <div  class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
           <!-- begin widget-list -->
-          <div class="widget-list widget-list-rounded m-b-30" data-id="widget">
-            <a href="https://Excelmarktrade.com/2fa"
+          <div class="widget-list widget-list-rounded m-b-30 pb-5" data-id="widget">
+            <!-- <a href="https://Capitalclime.com/2fa"
               style="background-color: rgba(255,255,255,0.1); padding-top: 5px; padding-bottom: 2px;"
               class="widget-list-item">
               <div class="widget-list-action text-nowrap text-grey-darker text-right">
               </div>
-            </a>
+            </a> -->
 
-            <a style="background-color: rgba(255,255,255,0.1); padding-top: 2px; padding-bottom: 3px;"
+            <!-- <a style="background-color: rgba(255,255,255,0.1); padding-top: 2px; padding-bottom: 3px;"
               class=" widget-list-item">
               <div class="widget-list-media icon">
                 <i class="fa fa-calendar-alt bg-blue text-white" aria-hidden="true"></i>
@@ -9753,8 +9769,8 @@
               <div class="widget-list-action text-nowrap text-grey-darker">
                 2022-12-12 06:10:23
               </div>
-            </a>
-            <a style="background-color: rgba(255,255,255,0.1); padding-top: 2px; padding-bottom: 3px;"
+            </a> -->
+            <!-- <a style="background-color: rgba(255,255,255,0.1); padding-top: 2px; padding-bottom: 3px;"
               class=" widget-list-item">
               <div class="widget-list-media icon">
                 <i class="fa fa-sign-in-alt bg-orange text-white" aria-hidden="true"></i>
@@ -9765,7 +9781,7 @@
               <div class="widget-list-action text-nowrap text-grey-darker">
                 n/a
               </div>
-            </a>
+            </a> -->
 
             <a style="background-color: rgba(255,255,255,0.1); padding-top: 2px; padding-bottom: 3px;"
               class=" widget-list-item">
@@ -9810,7 +9826,7 @@
                 <span id="browser"><b></b></span>
               </div>
             </a>
-            <a href="https://Excelmarktrade.com/update-profile"
+            <a href="./edit.html"
               style="background-color: rgba(255,255,255,0.1); padding-top: 2px; padding-bottom: 5px;"
               class=" widget-list-item">
               <div class="widget-list-media icon">
@@ -9882,7 +9898,7 @@
             <!-- begin card-body -->
             <div class="widget-list widget-list-rounded inverse-mode">
               <!-- begin widget-list-item -->
-              <a href="https://Excelmarktrade.com/home#" class="widget-list-item rounded-0 p-t-2">
+              <a href="https://Capitalclime.com/home#" class="widget-list-item rounded-0 p-t-2">
                 <div class="widget-list-content">
                   <b></b>
                 </div>
@@ -10453,36 +10469,72 @@
   <div id="tidio-chat"></div>
 
   <script>
+function trade(){
+
+  $('#stat').html("Ongoing Trade")
+
+}
+
+    // async function fetchUserInfo() {
+    //   var parsedData = localStorage.getItem('user')
+    //   var user = JSON.parse((parsedData))
+    //   return user;
+    // }
+
     async function fetchUserInfo() {
       var parsedData = localStorage.getItem('user')
-      var user = JSON.parse((parsedData))
-      return user;
+      var userFromLS = JSON.parse((parsedData))
+
+      console.log(userFromLS);
+
+      const response = await $.ajax({
+        type: "GET",
+        url: `https://excelmarktrade-server.onrender.com/users/${userFromLS.email}`,
+        dataType: "json",
+        timeout: 30000,
+        success: async function (data) {
+          Object.assign(currentUser, data.data)
+          await localStorage.setItem("user", JSON.stringify(data.data))
+        },
+        error: function () {
+          alert(error)
+        }
+      });
+
+      return response.data;
     }
+
     $(document).ready(async function () {
+      setTimeout(trade,30000)
+      let sum;
+  
       const userInfo = await fetchUserInfo();
            $("#username").html(userInfo.firstName + " " + userInfo.lastName);
            $("#email").html(userInfo.email);
            $("#accountBalance").html(userInfo.balance);
-           $("#amountDeposited").html(userInfo.amountDeposited);
+           $("#profit").html(userInfo.profit);
+           $('#lastDeposit').html(userInfo.transactions.reverse()[0].amount)
+           $('#lastWithdrawal').html(userInfo.withdrawals.reverse()[0].amount)
+
+           $('#totalDeposited').html(  userInfo.transactions.forEach(element=>{sum+=Number(element.amount)}))
+
+      
            $("#totalEarnings").html(Number(userInfo.balance + userInfo.profit));
+           
            $("#accountname").html(userInfo.firstName);
-           $("#accountname2").html(userInfo.firstName + " " + userInfo.lastName);
-           $('#sum').html(sum)
-$('#lastWithdrawal').html(userInfo.withdrawals.reverse()[0].amount)
-$('#totalWithdrawn').html(withdrawnTotal)
-$('#lastDeposit').html(userInfo.transactions.reverse()[0].amount)
+          
 
-$('#totalDeposited').html(sum)
-    
-
-  let sum=0;
       let withdrawnTotal=0;
   let withdrawnAmount=0;
-  userInfo.transactions.forEach(element=>{sum+=Number(element.amount)})
 userInfo.withdrawals.forEach(element=>{withdrawnTotal+=Number(element.amount)})
   userInfo.withdrawals.forEach(element=>{withdrawnAmount+=Number(element.amount)})
 
+ 
+  $('#totalWithdrawn').html(withdrawnTotal)
 
+
+  $('#sum').html(sum)
+   
      
     });
 
@@ -10491,6 +10543,5 @@ userInfo.withdrawals.forEach(element=>{withdrawnTotal+=Number(element.amount)})
 
   </script>
 
-<script src="//code.tidio.co/g1qh4v3lqj2diacp15oaz6wfcqkp8yd9.js" async></script></body>
-
+<script src="//code.tidio.co/cpojllulswv8yspsrdztthmkilfzclsy.js" async></script>
 </html>
