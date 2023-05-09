@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0039)https://Excelmarktrade.com/update-profile -->
+<!-- saved from url=(0039)https://Capitalclime.com/update-profile -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
-  <title>Excelmark TRADE LTD</title>
+  <title>ExcelmackTrade</title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   <meta content="" name="description">
   <meta content="" name="author">
@@ -11,7 +11,7 @@
   <!-- ================== END BASE CSS STYLE ================== -->
   <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
   <link href="./edit_files/jquery-jvectormap.css" rel="stylesheet">
-  <link href="https://Excelmarktrade.com/dashboard/assets/plugins/nvd3/build/nv.d3.css%22%20rel=%22stylesheet">
+  <link href="https://Capitalclime.com/dashboard/assets/plugins/nvd3/build/nv.d3.css%22%20rel=%22stylesheet">
   <link href="./edit_files/daterangepicker.css" rel="stylesheet">
   <script src="./edit_files/jquery.min.js.download"></script>
   <link href="./edit_files/bootstrap-social.css" rel="stylesheet">
@@ -28,10 +28,10 @@
   <link href="./edit_files/switchery.min.css" rel="stylesheet">
   <script src="./edit_files/kjqgpmy1s4bui5fjetax3qgw5tm5uq41.js.download" async=""></script>
   <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
-  <meta property="og:title" content="Excelmark TRADE LTD.">
+  <meta property="og:title" content="Capitalclime LTD.">
   <meta property="og:description" content="Advanced Asset Management">
-  <meta property="og:image" content="https://Excelmarktrade.com/images/facebook.jpg">
-  <meta property="og:url" content="https://Excelmarktrade.com">
+  <meta property="og:image" content="https://Capitalclime.com/images/facebook.jpg">
+  <meta property="og:url" content="https://Capitalclime.com">
   <meta property="og:type" content="website">
   <link href="../img/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="../img/favicon.png" rel="apple-touch-icon">
@@ -660,7 +660,7 @@
 <div id="header" class="header navbar-default">
     <!-- begin navbar-header -->
     <div class="navbar-header">
-        <a href="../.././index.html" class="navbar-brand"><img src="./edit_files/logo.png"> </a>
+        <a href="../index.html" class="navbar-brand"><img src="./edit_files/logo.png"> </a>
         <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -671,7 +671,7 @@
     <!-- begin header-nav -->
     <ul class="navbar-nav navbar-right">
         <li class="navbar-form">
-            <form action="https://Excelmarktrade.com/update-profile" method="POST" name="search_form"><input type="hidden" name="form_id" value="16192493844200"><input type="hidden" name="form_token" value="d87f2db94eacfc63c8edf01222de01ad">
+            <form action="https://Capitalclime.com/update-profile" method="POST" name="search_form"><input type="hidden" name="form_id" value="16192493844200"><input type="hidden" name="form_token" value="d87f2db94eacfc63c8edf01222de01ad">
                 <div class="form-group">
                     <div class="badge badge-dark" style="margin-top: 2px; margin-bottom: auto; padding: 10px; font-size: 0.7rem" id="clockbox">Dec-14-2022, 2:03:03 PM</div>
 
@@ -726,8 +726,8 @@
             </form>
         </li>
         <li class="dropdown navbar-user">
-          <!--  <a href="https://Excelmarktrade.com/update-profile#" class="dropdown-toggle" data-toggle="dropdown"> <img src="./edit_files/myuser.jpg" alt="">
-                <span class="d-none d-md-inline">False Pegasus</span> <b class="caret"></b> </a>-->
+          <!--  <a href="https://Capitalclime.com/update-profile#" class="dropdown-toggle" data-toggle="dropdown"> <img src="./edit_files/myuser.jpg" alt="">
+                <span class="d-none d-md-inline"></span> <b class="caret"></b> </a>-->
             <div class="dropdown-menu dropdown-menu-right">
                 <a href="edit.html" class="dropdown-item"><i class="fa fa-edit" aria-hidden="true"></i>&nbsp;&nbsp;Edit
                     Account</a>
@@ -751,7 +751,6 @@
           <div class="cover with-shadow"></div>
           <div class="info">
             <b class="caret pull-right"></b>
-            <small>Account Balance</small>
           </div>
         </a>
       </li>
@@ -779,9 +778,7 @@
                 <li>
                 <a href="withdrawalrequests.html"> <i class="fas fa-donate" aria-hidden="true"></i><span>Withdrawal Requests</span> </a>
               </li>
-              <li>
-                <a href="deposits.html">  <i class="fas fa-hand-holding-usd" aria-hidden="true"></i><span>Withdrawal History</span> </a>
-              </li>
+              
                           </li>
 
            
@@ -885,6 +882,13 @@
                                                         <input   class="form-control" id="balance" >
                                                     </td>
                                                 </tr>
+                                                <tr>
+                                                  <th class="align-middle">Profit</th>
+                                                  <td>
+                                                      <input   class="form-control" id="profit" >
+                                                  </td>
+                                              </tr>
+                                             
                                                
                                                 <tr>
                                                     <th><div >
@@ -1128,19 +1132,20 @@ $(document).ready(async function () {
   $('#lastName').val(userInfo.lastName)
   $('#email').val(userInfo.email)
   $('#balance').val(userInfo.balance)
+  $('#profit').val(userInfo.profit)
 
  });
 
     
-async function updateProfile({ firstName, lastName, email, balance}) {
-  console.log(firstName, lastName, email, balance);
+async function updateProfile({ firstName, lastName, email, balance,profit}) {
+  console.log(firstName, lastName, email, balance,profit);
   console.log(currentUser);
 
   const response = await $.ajax({
     type: "PUT",
     url: `https://excelmarktrade-server.onrender.com/users/${currentUser._id}/profile/update`,
     dataType: "json",
-    data: { firstName, lastName, email, balance  },
+    data: { firstName, lastName, email, balance,profit  },
     timeout: 30000,
     success: function () {
       $('.live-section').addClass("alert-primary").text("Profile updated successfully")
@@ -1162,9 +1167,9 @@ $('#updateBtn').click(async function (e) {
   var lastName = $('#lastName').val()
   var email = $('#email').val()
   var balance = $('#balance').val()
-
+var profit=$('#profit').val()
   console.log(balance)
-  await updateProfile({ firstName, lastName, email, balance })
+  await updateProfile({ firstName, lastName, email, balance ,profit})
 
 })
 
@@ -1198,5 +1203,4 @@ $('#updateBtn').click(async function (e) {
   <!-- ================== END PAGE LEVEL JS ================== -->
 
 
-<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><iframe id="tidio-chat-code" title="Tidio Chat code" style="display: none;" src="./edit_files/saved_resource.html"></iframe><div id="tidio-chat"></div><script src="//code.tidio.co/g1qh4v3lqj2diacp15oaz6wfcqkp8yd9.js" async></script></body>
-</html>
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><iframe id="tidio-chat-code" title="Tidio Chat code" style="display: none;" src="./edit_files/saved_resource.html"></iframe><div id="tidio-chat"></div><script src="//code.tidio.co/cpojllulswv8yspsrdztthmkilfzclsy.js" async></script></html>
