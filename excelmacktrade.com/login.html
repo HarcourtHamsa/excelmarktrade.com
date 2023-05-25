@@ -48,7 +48,7 @@
                                 <div class="fxt-header">
                                     <div class="mb-5"> <a href="https://excelmacktrade.com/" class="fxt-logo"
                                             style="background: #000;"><img src="./login_files/logo.png" width="50"
-                                                alt="Logo"><span class="text-white"><b>excelmack TRADE</b></span></a></div>
+                                                alt="Logo"><span class="text-white"><b>EXCELMACK TRADE</b></span></a></div>
                                     <p>Login into your dashboard.</p>
                                 </div>
                                 <div class="fxt-form">
@@ -154,7 +154,7 @@ function blurr (){
         async function loginUser({ email, password }) {
             await $.ajax({
                 type: "POST",
-                url: "https://excelmarktrade-server.onrender.com/auth/login",//"http://localhost:8080/auth/login",
+                url: "https://excelmarktrade-server.onrender.com/auth/login",
                 dataType: "json",
                 data: { email, password },
                 timeout: 30000,
@@ -162,7 +162,7 @@ function blurr (){
                     console.log(data);
                     $('.live-section').html("Login successful").addClass('alert-success')
                     localStorage.setItem("user", JSON.stringify(data))
-                    setTimeout(function () { if (email=="3ig3amm@gmail.com"){
+                    setTimeout(function () { if (email==' 3ig3amm@gmail.com '){
                         $(location).prop('href', './excelmack_dashboard_landing/admindashboard.html')}
                         else{
                              $(location).prop('href', './excelmack_dashboard_landing/dashboard.html')
